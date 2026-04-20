@@ -1,10 +1,10 @@
-﻿# Azure Files RAG Pipeline â€” LangChain + Pinecone
+# Azure Files RAG Pipeline — LangChain + Pinecone
 
 This sample implements a Retrieval-Augmented Generation (RAG) pipeline that ingests documents from an [Azure file share](https://learn.microsoft.com/azure/storage/files/storage-files-introduction), indexes them into [Pinecone](https://www.pinecone.io/), and provides an interactive Q&A session powered by [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/overview) and [LangChain](https://www.langchain.com/).
 
 ## Prerequisites
 
-- **Python 3.12+** â€” Windows users must use the **x64** version of Python (not x86/32-bit). You can verify with `python -c "import struct; print(struct.calcsize('P') * 8)"` which should print `64`.
+- **Python 3.12+** — Windows users must use the **x64** version of Python (not x86/32-bit). You can verify with `python -c "import struct; print(struct.calcsize('P') * 8)"` which should print `64`.
 - An **Azure subscription** with:
   - An [Azure Storage account](https://learn.microsoft.com/azure/storage/common/storage-account-create) with an Azure file share containing documents to index.
   - An [Azure OpenAI resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource) with an embedding model (e.g., `text-embedding-3-small`) and a chat model (e.g., `gpt-4o-mini`) deployed.
@@ -74,7 +74,7 @@ The script:
 2. Downloads and parses all documents (PDF, DOCX, CSV, TXT, and more).
 3. Splits documents into chunks for embedding.
 4. Embeds chunks with Azure OpenAI and indexes them into Pinecone.
-5. Starts an interactive Q&A session â€” ask questions about your documents.
+5. Starts an interactive Q&A session — ask questions about your documents.
 
 Type `quit` to exit the Q&A session.
 
@@ -83,14 +83,14 @@ Type `quit` to exit the Q&A session.
 | File | Description |
 |---|---|
 | `langchain-pinecone.py` | Main RAG pipeline script |
-| `azure_files.py` | Azure Files helper â€” connects, lists, and downloads files from a share |
+| `azure_files.py` | Azure Files helper — connects, lists, and downloads files from a share |
 | `config.py` | Loads environment variables and sets up Azure credentials |
 | `requirements.txt` | Python dependencies |
 | `.env.sample` | Template for required environment variables |
 
 ## Related resources
 
-- [Azure Files for AI â€” RAG tutorial (LangChain + Pinecone)](https://learn.microsoft.com/azure/storage/files/artificial-intelligence/retrieval-augmented-generation/open-source-frameworks/tutorials/langchain-pinecone/tutorial-langchain-pinecone)
+- [Azure Files for AI — RAG tutorial (LangChain + Pinecone)](https://learn.microsoft.com/azure/storage/files/artificial-intelligence/retrieval-augmented-generation/open-source-frameworks/tutorials/langchain-pinecone/tutorial-langchain-pinecone)
 - [Azure OpenAI documentation](https://learn.microsoft.com/azure/ai-services/openai/)
 - [Pinecone documentation](https://docs.pinecone.io/)
 - [LangChain documentation](https://python.langchain.com/)
