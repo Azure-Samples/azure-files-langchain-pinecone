@@ -1,0 +1,12 @@
+azure-identity
+azure-storage-file-share
+python-dotenv
+langchain
+langchain-community
+langchain-core
+langchain-openai
+langchain-text-splitters
+langchain-pinecone
+pinecone
+pypdf
+docx2txt
